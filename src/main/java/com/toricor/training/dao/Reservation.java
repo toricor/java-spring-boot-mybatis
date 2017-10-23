@@ -7,6 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class Reservation {
     private Integer id;
-    private Integer userId;
-    private Integer eventId;
+    private Integer user_id;
+    private Integer event_id;
 }

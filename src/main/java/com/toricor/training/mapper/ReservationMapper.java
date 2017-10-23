@@ -23,11 +23,10 @@ public interface ReservationMapper {
 
     // 更新系クエリの返り値はvoidにしないといけないようだ
     @Insert("INSERT INTO reservation(name) VALUES (#{name})")
-    @Options(useGeneratedKeys = true)
+    @Options(useGeneratedKeys = true, keyProperty = "id")
     void create(Reservation reservation);
 
-
-    @Update("UPDATE")
+    @Update("UPDATE reservation SET user_id = #{user_id}, event_id = #{event_id} WHERE id = #{id}")
     void update(Reservation reservation);
 
     @Delete("DELETE FROM reservation WHERE id = #{id}")

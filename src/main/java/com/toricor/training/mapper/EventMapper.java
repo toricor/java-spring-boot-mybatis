@@ -18,7 +18,16 @@ public interface EventMapper {
     @Options(useGeneratedKeys = true)
     void create(Event event);
 
-    @Update("UPDATE")
+    @Update("UPDATE event SET " +
+            "title = #{title}, " +
+            "description = #{description}, " +
+            "author = #{author}, " +
+            "place = #{place}, " +
+            "participants = #{participants}, " +
+            "max_participants = #{max_participants}, " +
+            "created_at = #{created_at}, " +
+            "published_at = #{published_at}" +
+            "WHERE id = #{id}")
     void update(Event event);
 
     @Delete("DELETE FROM event WHERE id = #{id}")
