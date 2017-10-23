@@ -24,7 +24,7 @@ public interface EventMapper {
     Event update(Event event);
 
     // TODO
-    @Delete("DELETE ")
-    void delete(Integer id);
+    @Delete("DELETE FROM event WHERE id = #{id}")
+    void delete(@Param("id") Integer id);
 
 }

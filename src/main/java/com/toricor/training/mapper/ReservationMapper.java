@@ -30,8 +30,7 @@ public interface ReservationMapper {
     @Update("UPDATE")
     Reservation update(Reservation reservation);
 
-    // TODO
-    @Delete("DELETE")
-    void delete(Integer id);
+    @Delete("DELETE FROM reservation WHERE id = #{id}")
+    void delete(@Param("id") Integer id);
 
 }

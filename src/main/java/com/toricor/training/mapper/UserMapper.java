@@ -14,6 +14,7 @@ public interface UserMapper {
     @Select("SELECT * FROM user WHERE id = #{id}")
     User findOne(@Param("id") Integer id);
 
+    // TODO
     @Insert("INSERT INTO user(name) VALUES (#{name})")
     @Options(useGeneratedKeys = true)
     User create(User user);
@@ -22,8 +23,7 @@ public interface UserMapper {
     @Update("UPDATE")
     User update(User user);
 
-    // TODO
-    @Delete("DELETE ")
-    void delete(Integer id);
+    @Delete("DELETE FROM user WHERE id = #{id}")
+    void delete(@Param("id") Integer id);
 
 }
