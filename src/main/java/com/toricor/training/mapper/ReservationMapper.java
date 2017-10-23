@@ -21,9 +21,11 @@ public interface ReservationMapper {
             "ORDER BY reservation.id")
     List<ReservationUserEvent> findAllJoined();
 
+    // 更新系クエリの返り値はvoidにしないといけないようだ
     @Insert("INSERT INTO reservation(name) VALUES (#{name})")
     @Options(useGeneratedKeys = true)
     void create(Reservation reservation);
+
 
     @Update("UPDATE")
     void update(Reservation reservation);
