@@ -22,12 +22,12 @@ public class UserService {
         return userMapper.findOne(id);
     }
 
-    public User create(User user) {
-        return userMapper.create(user);
+    public void create(User user) {
+        userMapper.create(user);
     }
 
-    public User update(User user) {
-        return userMapper.update(user);
+    public void update(User user) {
+        userMapper.update(user);
     }
 
     public void delete(Integer id) {

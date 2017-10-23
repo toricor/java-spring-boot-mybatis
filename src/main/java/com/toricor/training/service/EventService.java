@@ -22,12 +22,12 @@ public class EventService {
         return eventMapper.findOne(id);
     }
 
-    public Event create(Event event) {
-        return eventMapper.create(event);
+    public void create(Event event) {
+        eventMapper.create(event);
     }
 
-    public Event update(Event event) {
-        return eventMapper.update(event);
+    public void update(Event event) {
+        eventMapper.update(event);
     }
 
     public void delete(Integer id) {

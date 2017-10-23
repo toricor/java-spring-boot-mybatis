@@ -21,14 +21,12 @@ public interface ReservationMapper {
             "ORDER BY reservation.id")
     List<ReservationUserEvent> findAllJoined();
 
-    // TODO
     @Insert("INSERT INTO reservation(name) VALUES (#{name})")
     @Options(useGeneratedKeys = true)
-    Reservation create(Reservation reservation);
+    void create(Reservation reservation);
 
-    // TODO
     @Update("UPDATE")
-    Reservation update(Reservation reservation);
+    void update(Reservation reservation);
 
     @Delete("DELETE FROM reservation WHERE id = #{id}")
     void delete(@Param("id") Integer id);

@@ -30,14 +30,14 @@ public class UserController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    User postUsers(@RequestBody User user) {
-        return userService.create(user);
+    void postUsers(@RequestBody User user) {
+        userService.create(user);
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
-    User putUser(@PathVariable Integer id, @RequestBody User user) {
+    void putUser(@PathVariable Integer id, @RequestBody User user) {
         user.setId(id);
-        return userService.update(user);
+        userService.update(user);
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE)

@@ -38,14 +38,14 @@ public class ReservationController {
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    Reservation postReservations(@RequestBody Reservation reservation) {
-        return reservationService.create(reservation);
+    void postReservations(@RequestBody Reservation reservation) {
+        reservationService.create(reservation);
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
-    Reservation putReservation(@PathVariable Integer id, @RequestBody Reservation reservation) {
+    void putReservation(@PathVariable Integer id, @RequestBody Reservation reservation) {
         reservation.setId(id);
-        return reservationService.update(reservation);
+        reservationService.update(reservation);
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE)

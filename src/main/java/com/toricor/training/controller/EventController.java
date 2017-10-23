@@ -32,14 +32,14 @@ public class EventController {
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    Event postEvents(@RequestBody Event event) {
-        return eventService.create(event);
+    void postEvents(@RequestBody Event event) {
+        eventService.create(event);
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.PUT)
-    Event putEvent(@PathVariable Integer id, @RequestBody Event event) {
+    void putEvent(@PathVariable Integer id, @RequestBody Event event) {
         event.setId(id);
-        return eventService.update(event);
+        eventService.update(event);
     }
 
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE)

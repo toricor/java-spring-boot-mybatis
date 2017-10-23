@@ -14,16 +14,13 @@ public interface EventMapper {
     @Select("SELECT * FROM event WHERE id = #{id}")
     Event findOne(@Param("id") Integer id);
 
-    // TODO
     @Insert("INSERT INTO event(title) VALUES (#{title})")
     @Options(useGeneratedKeys = true)
-    Event create(Event event);
+    void create(Event event);
 
-    // TODO
     @Update("UPDATE")
-    Event update(Event event);
+    void update(Event event);
 
-    // TODO
     @Delete("DELETE FROM event WHERE id = #{id}")
     void delete(@Param("id") Integer id);
 

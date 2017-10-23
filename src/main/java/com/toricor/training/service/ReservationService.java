@@ -27,12 +27,12 @@ public class ReservationService {
         return reservationMapper.findOne(id);
     }
 
-    public Reservation create(Reservation reservation) {
-        return reservationMapper.create(reservation);
+    public void create(Reservation reservation) {
+        reservationMapper.create(reservation);
     }
 
-    public Reservation update(Reservation reservation) {
-        return reservationMapper.update(reservation);
+    public void update(Reservation reservation) {
+        reservationMapper.update(reservation);
     }
 
     public void delete(Integer id) {
