@@ -12,7 +12,7 @@ public interface UserMapper {
     List<User> findAll();
 
     @Select("SELECT * FROM user WHERE id = #{id}")
-    User findOne(Integer id);
+    User findOne(@Param("id") Integer id);
 
     @Insert("INSERT INTO user(name) VALUES (#{name})")
     @Options(useGeneratedKeys = true)

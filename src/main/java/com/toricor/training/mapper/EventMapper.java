@@ -12,8 +12,9 @@ public interface EventMapper {
     List<Event> findAll();
 
     @Select("SELECT * FROM event WHERE id = #{id}")
-    Event findOne(Integer id);
+    Event findOne(@Param("id") Integer id);
 
+    // TODO
     @Insert("INSERT INTO event(title) VALUES (#{title})")
     @Options(useGeneratedKeys = true)
     Event create(Event event);

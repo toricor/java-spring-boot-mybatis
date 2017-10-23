@@ -13,7 +13,7 @@ public interface ReservationMapper {
     List<Reservation> findAll();
 
     @Select("SELECT * FROM reservation WHERE id = #{id}")
-    Reservation findOne(Integer id);
+    Reservation findOne(@Param("id") Integer id);
 
     @Select("SELECT reservation.id, user.name AS user_name, event.title AS event_name FROM reservation " +
             "INNER JOIN user ON user.id = reservation.user_id " +
@@ -21,6 +21,7 @@ public interface ReservationMapper {
             "ORDER BY reservation.id")
     List<ReservationUserEvent> findAllJoined();
 
+    // TODO
     @Insert("INSERT INTO reservation(name) VALUES (#{name})")
     @Options(useGeneratedKeys = true)
     Reservation create(Reservation reservation);

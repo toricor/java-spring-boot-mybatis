@@ -23,7 +23,7 @@ public class ReservationController {
     }
 
     // 予約全件取得(Joined)
-    @RequestMapping(value = "joined",method = RequestMethod.GET)
+    @RequestMapping(value = "joined", method = RequestMethod.GET)
     List<ReservationUserEvent> getReservationsJoined() {
         List<ReservationUserEvent> reservations = reservationService.findAllJoined();
         return reservations;
