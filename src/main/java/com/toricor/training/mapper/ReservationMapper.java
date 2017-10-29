@@ -22,7 +22,7 @@ public interface ReservationMapper {
     List<ReservationUserEvent> findAllJoined();
 
     // 更新系クエリの返り値はvoidにしないといけないようだ
-    @Insert("INSERT INTO reservation(name) VALUES (#{name})")
+    @Insert("INSERT INTO reservation(user_id, event_id) VALUES (#{user_id}, #{event_id})")
     @Options(useGeneratedKeys = true, keyProperty = "id")
     void create(Reservation reservation);
 
