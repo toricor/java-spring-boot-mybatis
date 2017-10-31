@@ -1,7 +1,7 @@
 package com.toricor.training.controller;
 
-import com.toricor.training.dao.Reservation;
-import com.toricor.training.dao.ReservationUserEvent;
+import com.toricor.training.domain.Reservation;
+import com.toricor.training.domain.ReservationUserEvent;
 import com.toricor.training.service.ReservationService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

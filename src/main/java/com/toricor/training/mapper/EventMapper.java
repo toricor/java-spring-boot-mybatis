@@ -1,6 +1,6 @@
 package com.toricor.training.mapper;
 
-import com.toricor.training.dao.Event;
+import com.toricor.training.domain.Event;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

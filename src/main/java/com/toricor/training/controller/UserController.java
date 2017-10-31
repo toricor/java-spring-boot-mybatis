@@ -1,6 +1,6 @@
 package com.toricor.training.controller;
 
-import com.toricor.training.dao.User;
+import com.toricor.training.domain.User;
 import com.toricor.training.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

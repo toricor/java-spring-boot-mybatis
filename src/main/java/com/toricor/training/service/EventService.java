@@ -1,6 +1,6 @@
 package com.toricor.training.service;
 
-import com.toricor.training.dao.Event;
+import com.toricor.training.domain.Event;
 import com.toricor.training.mapper.EventMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

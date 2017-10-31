@@ -1,6 +1,6 @@
 package com.toricor.training.mapper;
 
-import com.toricor.training.dao.User;
+import com.toricor.training.domain.User;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

@@ -1,7 +1,7 @@
 package com.toricor.training.mapper;
 
-import com.toricor.training.dao.Reservation;
-import com.toricor.training.dao.ReservationUserEvent;
+import com.toricor.training.domain.Reservation;
+import com.toricor.training.domain.ReservationUserEvent;
 import org.apache.ibatis.annotations.*;
 
 import java.util.List;

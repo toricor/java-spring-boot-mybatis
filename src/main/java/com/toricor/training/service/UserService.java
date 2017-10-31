@@ -1,6 +1,6 @@
 package com.toricor.training.service;
 
-import com.toricor.training.dao.User;
+import com.toricor.training.domain.User;
 import com.toricor.training.mapper.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

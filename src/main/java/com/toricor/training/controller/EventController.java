@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import com.toricor.training.dao.Event;
+import com.toricor.training.domain.Event;
 
 
 @RestController

@@ -1,4 +1,4 @@
-package com.toricor.training.dao;
+package com.toricor.training.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
