@@ -7,6 +7,8 @@ ii)`./gradlew bootRun` or `./gradlew build && java -jar java-spring-boot-jdbc-0.
 
 ## 仕様
 エンジニア向けイベント予約サイトをつくる
+ほげ
+
 
 ## API Endpoint
 port: 8080
