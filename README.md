@@ -17,6 +17,9 @@ port: 8080
 - `PUT    /api/events/:id`  # Update the event
 - `DELETE /api/events/:id`  # Delete the event
 
+
+
+ 
 ### User(s)
 - `GET    /api/users`      # All users
 - `GET    /api/users/:id`  # A user
